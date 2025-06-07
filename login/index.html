@@ -10,22 +10,17 @@
  
 
 </head>
-<body class='login'>
-	<form action="../index.html" method="get">
-		<input type="submit" name="nama" />
-		<input type="submit" name="kata sandi" />
-		<input type="submit" name="dst" value="Login" />
-		<input type="submit" name="popup" value="Login" />
+<body>
+	<h2>Login page</h2>
+	<form action="..index.html" method="get">
+		<label>Nama:</label><br>
+		<input type="text" name="nama" required><br><br>
+
+		<label>kata sandi:</label><br>
+		<input type="password" name="kata_sandi" required><br><br>
+
+		<input type="submit" value="Login">
 	</form>
-	
-	    {
-		document.sendin.nama.value = document.login.nama.value;
-		document.sendin.kata sandi.value = hexMD5('Login' + document.login.kata sandi.value + '(Login)');
-		document.sendin.submit();
-		return false;
-	    }
-	//-->
-	</script>
 haii
 
 
