@@ -1,26 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<meta charset="utf-8">
-<title>Login</title>
-<meta http-equiv="pragma" content="no-cache" />
-<meta http-equiv="expires" content="-1" />	
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" />
-<link rel="stylesheet" href="login.css" media="screen">
- 
-
+  <meta charset="utf-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-	<h2>Login page</h2>
-	<form action="..index.html" method="get">
-		<label>Nama:</label><br>
-		<input type="text" name="nama" required><br><br>
 
-		<label>kata sandi:</label><br>
-		<input type="password" name="kata_sandi" required><br><br>
+  <h2>Login Page</h2>
 
-		<input type="submit" value="Login">
-	</form>
+  <form onsubmit="return loginUser()">
+    <label>Nama:</label><br>
+    <input type="text" id="nama" required><br><br>
+
+    <label>Kata sandi:</label><br>
+    <input type="password" id="kata_sandi" required><br><br>
+
+    <input type="submit" value="Login">
+  </form>
+
+  <script>
+    function loginUser() {
+      const nama = document.getElementById("nama").value;
+      const sandi = document.getElementById("kata_sandi").value;
+
+      if (nama && sandi) {
+        // Sukses, arahkan ke halaman landing
+        window.location.href = "../index.html";
+        return false; // Mencegah reload form
+      } else {
+        alert("Nama dan kata sandi wajib diisi!");
+        return false;
+      }
+    }
+  </script>
+
+</body>
+</html>
+
 haii
 
 
